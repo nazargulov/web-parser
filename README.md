@@ -2,7 +2,6 @@
 
 ## Prepare
 - `bundle install`
-- `mv application.yml.example application.yml`
 - Initialize URLs in application.yml
 - `mkdir tmp` for cache
 
