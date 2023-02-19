@@ -1,0 +1,7 @@
+TIMEOUT: 10
+MAX_RETRY: 10
+POOL_SIZE: 10
+URLS:
+  - 'https://www.tcmb.gov.tr/wps/wcm/connect/en/tcmb+en/main+menu/statistics/exchange+rates/indicative+exchange+rates'
+  - 'https://www.bnm.md/en/content/official-exchange-rates'
+  - 'https://bankofgeorgia.ge/en/currencies'
