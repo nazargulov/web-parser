@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
 require 'digest/md5'
-require 'celluloid/autostart'
 
 module Scraper
   # Caching html documents to files
   class Cache
-    include Celluloid
-
     FILENAME_SEPARATOR = '_'
     TTL = 30 * 24 * 60 * 60 # seconds
+
     attr_reader :url, :file
 
     class << self
@@ -41,7 +39,7 @@ module Scraper
         read
       else
         document = yield
-        async.write(document) unless document.nil?
+        write(document) unless document.nil?
         document
       end
     end

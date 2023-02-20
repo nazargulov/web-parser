@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'open-uri'
 require 'HTTParty'
 require 'celluloid/autostart'
 require 'celluloid/pool'
@@ -17,6 +16,7 @@ module Scraper
     TIMEOUT = 10 # seconds
     RATE_LIMIT = 300 # times per minute
     RETRY = 3
+    POOL_SIZE = 5
 
     attr_reader :url, :cache, :timeout, :times_retried
 
